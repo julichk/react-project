@@ -1,0 +1,55 @@
+.header{
+  width: 100%;
+  background-color: rgb(133, 238, 208);
+  height: 50px;
+
+  &_sidebar{
+    width: 10%;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+
+    @media (min-width: 2500px){
+      width: 7%;
+    }
+
+    &_menu-icon{
+      width: 30px;
+      height: 30px;
+      color: #fff;
+    }
+
+    &_user-photo{
+      width: 34px;
+      height: 34px;
+      background-color: rgba(78, 97, 107, 0.503);
+      border-radius: 50%;
+      border: 1px solid #fff;
+      background-size: cover; 
+      background-position: center; 
+    }
+
+    &_input{
+      position: absolute;
+      width: 30px;
+      z-index: 1;
+      right: 3px;
+      opacity: 0;
+    }
+  }
+}
+
+.user-photo-upgrate{
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+

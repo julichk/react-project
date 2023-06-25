@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Calendar from './components/Calendar/Calendar';
+import List from './components/List/List';
+import Total from './components/Total/Total';
+import Router from './pages/Router';
+import Weather from './components/Weather/Weather';
 
 function App() {
+  const [checkboxes, setCheckboxes] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Router />
+      <div className="todo-list">
+        <List
+          checkboxes={checkboxes}
+          setCheckboxes={setCheckboxes}
+          className="conteiner_form"
+        />
+        <Total
+          checkboxes={checkboxes}
+          setCheckboxes={setCheckboxes}
+          className="conteiner-total_block_items"
+        />
+      </div>
+      <div className="conteiner-weather-calendar">
+        <div className="conteiner-weather-calendar_weather">
+          <Weather />
+        </div>
+        <Calendar className="myCalendar" />
+      </div>
     </div>
   );
 }

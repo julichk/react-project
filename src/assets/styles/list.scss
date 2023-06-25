@@ -1,0 +1,110 @@
+.conteiner_form{
+  height: 40px;
+  width: 100%;
+}
+
+.todo-list{
+  background-image: url('../background-2319683_1280.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 250px;
+  min-height: 300px;
+  border-radius: 5px;
+
+  @media (max-width: 768px) {
+    background-size: contain;
+  }
+}
+
+.note-box{
+  width: 100%;
+}
+
+.conteiner_form{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: rgb(143, 222, 244);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 5px 10px;
+
+ &_input{
+  background-color: aliceblue;
+  height: 30px;
+  padding: 2px 5px;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  border-radius: 10px;
+  color: rgb(95, 173, 195);
+
+  &:focus{
+    border: 1px solid rgb(95, 173, 195);
+  }
+ }
+}
+
+
+.block{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  &_conteiner-checkbox{
+    background-color: #ffffff8a;
+    width: 95%;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(76, 147, 167);
+    padding: 3px 5px;
+  }
+}
+
+.conteiner_checkbox_check {
+  -webkit-appearance: none;
+  background-color: rgba(95, 173, 195, 0.433);
+  border: 1px solid #fff;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+  &:checked {
+    background-color:  rgba(255, 255, 255, 0.433);
+    border: 1px solid  rgba(255, 255, 255, 0.433);
+
+    + label {
+      color:rgba(76, 147, 167, 0.32);
+      
+    }
+  }
+}
+.red{
+  background-color:  rgb(143, 222, 244);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(66, 152, 175);
+  height: 35px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
