@@ -1,0 +1,215 @@
+.backround-content{
+  min-height: 100vh;
+  background-image: url('../2116674.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.notes-app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(240, 248, 255, 0.444);
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  
+
+  .notes-app__input-section {
+    width: 230px;
+    height: 270px;
+    background-image: url('../watercolor-5062356_1280.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display:flex ;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+
+    .notes-app__input-text {
+      width: 100%;
+      font-family: "IBM Plex Sans", serif;
+      font-weight: 400;
+      padding: 5px;
+      height: 100%;
+      color: rgb(35, 101, 119);
+
+      &:focus {
+        box-shadow: rgba(22, 80, 188, 0.641) 0px 2px 14px;
+      }
+    }
+
+    .notes-app__add-button {
+      margin-top: auto;
+      color: rgb(35, 101, 119);
+      background-color: rgba(240, 248, 255, 0.642);
+      font-family: "IBM Plex Sans", serif;
+      font-weight: 400;
+      margin-bottom: 123px;
+      padding: 5px 10px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgba(21, 33, 120, 0.641);
+        color: rgb(235, 243, 250);
+        transition: ease-in-out 0.3s;
+        box-shadow: rgba(15, 28, 131, 0.641) 0px 8px 24px;
+      }
+    }
+  }
+
+  .notes-app__note-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    .notes-app__note-item {
+      width: 230px;
+      height: 270px;
+      background-image: url('../BlueWatercolor.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      padding: 10px;
+
+      .notes-app__note--editing {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 460px;
+        height: 560px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../BlueWatercolor.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 10px;
+
+        .notes-app__note-textarea {
+          width: 100%;
+          height: 90%;
+          font-family: "IBM Plex Sans", serif;
+          font-weight: 400;
+          font-family: "IBM Plex Sans", serif;
+          font-weight: 400;
+          color: rgb(35, 101, 119);
+        }
+
+        .notes-app__note-buttons {
+          margin-top: 10px;
+        }
+      }
+
+      .notes-app__note-text {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .notes-app__edit-button,
+      .notes-app__delete-button {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.lol {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(240, 248, 255, 0.642);
+  padding: 5px;
+}
+
+.notes-app__note-span {
+  width: 95%;
+  height: 90%;
+  overflow: hidden;
+  border-radius: 5px;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  color: rgb(35, 101, 119);
+}
+
+.notes-app_button {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  color: rgb(35, 101, 119);
+}
+
+.notes-app__input-section-text {
+  background-color: rgba(240, 248, 255, 0.642);
+  width: 100%;
+  height: 30px;
+}
+
+.notes-app_button_edit {
+  color: rgb(35, 101, 119);
+
+  &:hover{
+    text-shadow: 4px -5px 25px rgb(4, 40, 160);
+    color: rgb(27, 134, 163);
+    transition: ease-in .3s;
+  }
+}
+
+.notes-app_button_delete {
+  color: rgb(35, 101, 119);
+
+  &:hover{
+    text-shadow: 4px -5px 25px rgb(4, 40, 160);
+    color: rgb(27, 134, 163);
+    transition: ease-in .3s;
+  }
+}
+
+.textarea-bg{
+  background-color: rgba(240, 248, 255, 0.642);
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.notes-app__save-button{
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  color: rgb(35, 101, 119);
+  padding: 5px 10px;
+
+  &:hover{
+    text-shadow: -3px -3px 25px rgb(3, 26, 100);
+    color: rgb(27, 134, 163);
+    transition: ease-in .3s;
+  }
+}
+
+.notes-app__note-text{
+  line-height: 20px;
+}
