@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom'; 
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import './assets/styles/notes.scss'
 import './assets/styles/normalize.scss';
 import './assets/styles/header.scss';
 import './assets/styles/calendar.scss';
@@ -12,9 +12,9 @@ import './assets/styles/list.scss';
 import './assets/styles/button.scss';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  
     <App />
-  </BrowserRouter>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

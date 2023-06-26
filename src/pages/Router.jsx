@@ -1,10 +1,17 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import NotesPage from '../components/NotesPage/NotesPage';
 
 function Router() {
   return (
     <Routes>
-     <Route path="/" element={<div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quod ipsam praesentium ut doloremque recusandae natus debitis nemo, amet culpa molestiae quis consequatur repellendus laboriosam quo rerum, doloribus hic voluptates?</div>} />
+      <Route
+        path="/" element={<Home/>}
+      />
+      <Route path="/notes" element={<NotesPage/>} />
+      <Route path="*" element={<Navigate to="/"/>}/>
     </Routes>
+    
   );
 }
 
