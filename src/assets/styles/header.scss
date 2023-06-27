@@ -1,7 +1,24 @@
+
+
+.header_logo{
+  display: flex;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 300;
+  font-size: 26px;
+  color: rgb(255, 255, 255);
+}
+
+.side{
+  width: 150px;
+}
+
 .header{
   width: 100%;
-  background-color: rgb(133, 238, 208);
+  background-color:rgba(133, 226, 238, 0.797);
   height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &_sidebar{
     width: 10%;
@@ -10,8 +27,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
-    
 
     @media (min-width: 2500px){
       width: 7%;

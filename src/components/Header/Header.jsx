@@ -1,5 +1,7 @@
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState, useEffect } from "react";
+import Logo from "../Logo";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [userPhoto, setUserPhoto] = useState(null);
@@ -20,20 +22,25 @@ const Header = () => {
 
   return (
     <header className="header">
-      <nav className="header_sidebar">
-        <AiOutlineMenu className="header_sidebar_menu-icon" />
-        <div className="user-photo-upgrate">
-          <div
-            className="header_sidebar_user-photo"
-            style={{ backgroundImage: `url(${userPhoto})` }}
-          ></div>
-          <input
-            type="file"
-            className="header_sidebar_input"
-            onChange={handlePhotoChange}
-          />
-        </div>
-      </nav>
+      
+        <nav className="header_sidebar">
+          <AiOutlineMenu className="header_sidebar_menu-icon" />
+          <div className="user-photo-upgrate">
+            <div
+              className="header_sidebar_user-photo"
+              style={{ backgroundImage: `url(${userPhoto})` }}
+            ></div>
+            <input
+              type="file"
+              className="header_sidebar_input"
+              onChange={handlePhotoChange}
+            />
+          </div>
+        </nav>
+        <Link to="/" >
+          <Logo/>
+        </Link>
+      <div className="side"></div>
     </header>
   );
 };
