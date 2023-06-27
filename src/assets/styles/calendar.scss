@@ -3,14 +3,30 @@
    height: 100%;
 }
 
+.calendar{
+    height: 100%;
+}
+
 .myCalendar{
  width: 275px;
 height: 225px;
+
+}
+
+.fc .fc-scrollgrid-liquid{
+    border-left: 1px solid   rgb(133, 226, 238);
+    border-top: 1px solid   rgb(133, 226, 238);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.fc-theme-standard td, .fc-theme-standard th {
+    border: 1px solid   rgb(133, 226, 238);
 }
 
 .fc-event{
-    background-color:  rgb(133, 238, 208);
-    border: 1px solid  rgb(133, 238, 208);
+    background-color:  rgb(133, 226, 238);
+    border: 1px solid   rgb(133, 226, 238);
+    
 }
 
 .fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start {
@@ -29,7 +45,7 @@ height: 225px;
 }
 
 .fc-col-header-cell{
-    background-color: rgb(133, 238, 208);
+    background-color: rgb(133, 226, 238);
 }
 
 .fc-col-header-cell-cushion{
@@ -39,7 +55,7 @@ height: 225px;
 }
 
 .fc-daygrid-day-number{
- color: rgb(121, 216, 189);
+ color: rgb(66, 186, 202);
 }
 
 .fc .fc-toolbar.fc-header-toolbar {
@@ -47,14 +63,14 @@ height: 225px;
 }
 
 .fc .fc-button-primary {
-    background-color: rgb(121, 216, 189);
-    border: 1px solid #ddd;
+    background-color: rgb(133, 226, 238);;
+    border: 1px solid rgb(143, 222, 244);
     font-family: "IBM Plex Sans", serif;
     font-size: 14px;
 }
 
 .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
-    background-color: rgb(121, 216, 189);
+    background-color: rgb(133, 226, 238);
     width: 30px;
     display: flex;
     align-items: center;
@@ -66,24 +82,24 @@ height: 225px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:  rgb(121, 216, 189);
+    background-color:  rgb(133, 226, 238);
 }
 
 
 
 .fc .fc-button-primary:disabled{
-    background-color: rgb(143, 204, 186);
-    border: 1px solid #ddd;
+    background-color: rgba(92, 197, 211, 0.652);
+    border: 1px solid rgb(143, 222, 244);
 }
 
 .fc .fc-button-primary:hover {
-    background-color: rgb(92, 141, 125);
+    background-color :rgb(133, 226, 238);
     border: none;
 }
 
 .fc .fc-toolbar-title{
     font-family: "IBM Plex Sans", serif;
-    color:  rgb(89, 175, 151);
+    color: rgb(66, 186, 202);
     font-weight: 300;
     font-size: 18px;
 }

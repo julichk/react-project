@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Header from '../Header/Header';
 
 function NotesApp() {
   const [notes, setNotes] = useState([]);
@@ -54,7 +55,9 @@ function NotesApp() {
   };
 
   return (
-    <div className='backround-content'>
+    <div>
+      <Header/>
+      <div className='backround-content'>
       <div className="notes-app">
       <div className="notes-app__input-section">
         <div className="notes-app__input-section-text">
@@ -99,6 +102,7 @@ function NotesApp() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
     </div>
   );
