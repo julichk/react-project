@@ -21,8 +21,8 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
-  @media (max-width: 768px) {
-    background-size: contain;
+  @media (max-width: 790px) {
+    width: 200px;
   }
 }
 
@@ -101,6 +101,11 @@
     }
   }
 }
+
+.add-todo{
+  width: 100%;
+}
+
 .red {
   background-color: rgb(143, 222, 244);
   display: flex;
@@ -114,4 +119,8 @@
   height: 35px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
 }

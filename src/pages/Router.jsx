@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import NotesPage from '../components/NotesPage/NotesPage';
-import Logo from '../components/Logo';
 
 function Router() {
   return (

@@ -1,15 +1,57 @@
 .content {
-  height: 95vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   padding: 2.5vh;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    @media (max-width: 743px) {
+       
+    }
+
   &_container {
-    height: 70vh;
+    gap: 40px;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh ;
+    background-color: rgba(97, 192, 203, 0.231);
+
+    @media (min-width: 1430px) {
+        gap: 100px;
+        padding: 5vh;
+    }
+  }
+}
+
+.weather-conteiner{
+    display: flex;
+    justify-content: end;
+    padding: 0 57px;
+    width: 100%;
+
+    @media (max-width: 1279px) {
+        padding: 0;
+        justify-content: center;
+     }
+
+    @media (max-width: 744px) {
+       justify-content: center;
+    }
+}
+
+.without-weather{
     display: flex;
     justify-content: space-around;
-    padding: 2vh 0;
-    background-color: rgba(97, 192, 203, 0.231);
-  }
+    
+    gap: 10px;
+
+    @media (max-width: 744px) {
+        flex-wrap: wrap-reverse;
+    }
 }
