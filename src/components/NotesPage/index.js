@@ -1,2 +1,2 @@
-import NotePage from './NotePage'
+import NotePage from "./NotePage";
 export default NotePage;

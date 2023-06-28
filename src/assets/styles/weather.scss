@@ -1,84 +1,84 @@
-.weather-calendar-conteiner{
+.weather-calendar-conteiner {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 60px;
+  padding-bottom: 6vh;
 }
 
-.conteiner-weather-calendar{
- border-radius: 5px;
- max-width: 400px;
- display: flex;
- flex-direction: column;
- align-items: center;
- gap: 50px;
 
- &_weather{
-  max-width: 300px;
-  height: 84px;
- }
-}
+.conteiner-weather-calendar {
+  border-radius: 5px;
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
 
-.weather{
-  max-width: 300px;
-  height: 100%;
-  
-    
-  &_block{
-    width: 100%;
-    height: 100px;
-    background-color:  rgba(133, 226, 238, 0.797);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5px;
-    border-radius: 5px;
-    padding: 5px;
+  &_weather {
+    max-width: 30vw;
+    height: 10vh;
   }
 }
 
-.weather_block_loc-time{
+.weather {
+  max-width: 30vw;
+  height: 100%;
+
+  &_block {
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(133, 226, 238, 0.797);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5vh;
+    border-radius: 5px;
+    padding: 0.5vh;
+  }
+}
+
+.weather_block_loc-time {
   grid-column: 1 / span 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  &_time{
+  &_time {
     color: #fff;
     font-family: "IBM Plex Sans", serif;
     display: flex;
     justify-content: center;
-    font-size: 32px;
+    font-size: 2.6vh;
     font-weight: 300;
   }
 
-  &_location{
+  &_location {
     color: #fff;
     font-family: "IBM Plex Sans", serif;
     text-align: center;
   }
 }
 
-.weather_block_info{
+.weather_block_info {
   grid-column: 2;
   grid-row: 1;
   display: flex;
   align-items: start;
   justify-content: start;
 
-  &_icon{
-    margin-bottom: 10px;
+  &_icon {
+    margin-bottom: 1vh;
   }
 
-  &_temp{
+  &_temp {
     color: #fff;
     font-family: "IBM Plex Sans", serif;
-    font-size: 26px;
-    margin-top: 15px;
+    font-size: 2.1vh;
+    margin-top: 1.5vh;
     font-weight: 300;
   }
 }
-
 
 .weather_block_sun {
   grid-column: 1 / span 2;
@@ -86,15 +86,35 @@
   display: flex;
   justify-content: space-around;
   grid-gap: 10px;
-  gap: 5px;
+  gap: .5vh;
 
-  &_rise{
+  &_rise {
     color: #fff;
     font-family: "IBM Plex Sans", serif;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vh;
+    font-weight: 300;
   }
 
-  &_set{
+  &_set {
     color: #fff;
     font-family: "IBM Plex Sans", serif;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vh;
+    font-weight: 300;
   }
+
+  
 }
+.sunrise:before,
+.sunset:before {
+  content: "";
+  display: block;
+  width: 2.5vh;
+  height: 2.5vh;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: 0.5vh;
+  }

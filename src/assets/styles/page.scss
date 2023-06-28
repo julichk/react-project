@@ -1,15 +1,15 @@
-.content{
-    height: 95vh;
-    display: flex;
-    align-items: center;
-    padding: 30px;
-  
-    &_container{
-    height: 700px;
+.content {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  padding: 2.5vh;
+
+  &_container {
+    height: 70vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 20px 0;
-    background-color:  rgba(97, 192, 203, 0.231);
-    }
+    padding: 2vh 0;
+    background-color: rgba(97, 192, 203, 0.231);
   }
+}
