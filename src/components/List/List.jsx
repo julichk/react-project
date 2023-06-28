@@ -1,9 +1,7 @@
 import classNames from "classnames";
 import { useState } from "react";
 
-
 function List({ checkboxes, setCheckboxes, className }) {
-  // Додали пропси checkboxes та setCheckboxes
   const formClassName = classNames(className);
 
   const [inputText, setInputText] = useState("");
@@ -41,7 +39,7 @@ function List({ checkboxes, setCheckboxes, className }) {
           className="conteiner_form_button"
           onClick={handleClick}
         >
-         Add todo
+          Add todo
         </button>
       </form>
 

@@ -1,4 +1,4 @@
-.conteiner_form_button{
+.conteiner_form_button {
   background-color: aliceblue;
   height: 30px;
   padding: 2px 5px;
@@ -7,11 +7,10 @@
   border-radius: 10px;
   color: rgb(95, 173, 195);
 
-  &:hover{
+  &:hover {
     background-color: rgb(143, 222, 244);
     color: #fff;
     border: 1px solid #fff;
-    transition: ease-in-out .2s;
+    transition: ease-in-out 0.2s;
   }
 }
-

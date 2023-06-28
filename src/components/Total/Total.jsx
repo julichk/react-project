@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import classNames from 'classnames';
-import ButtonReset from '../elements/ButtonReset';
+import React, { useState } from "react";
+import classNames from "classnames";
+import ButtonReset from "../elements/ButtonReset";
 
 function Total({ checkboxes, setCheckboxes, className }) {
   const totalClassName = classNames(className);
-  
 
   const renderCounterText = () => {
     const itemCount = checkboxes.length;

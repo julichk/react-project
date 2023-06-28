@@ -1,6 +1,4 @@
-
-
-.header_logo{
+.header_logo {
   display: flex;
   font-family: "IBM Plex Sans", serif;
   font-weight: 300;
@@ -8,19 +6,19 @@
   color: rgb(255, 255, 255);
 }
 
-.side{
+.side {
   width: 150px;
 }
 
-.header{
+.header {
   width: 100%;
-  background-color:rgba(133, 226, 238, 0.797);
+  background-color: rgba(133, 226, 238, 0.797);
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  &_sidebar{
+  &_sidebar {
     width: 10%;
     height: 100%;
     padding: 0 20px;
@@ -28,27 +26,27 @@
     align-items: center;
     justify-content: space-around;
 
-    @media (min-width: 2500px){
+    @media (min-width: 2500px) {
       width: 7%;
     }
 
-    &_menu-icon{
+    &_menu-icon {
       width: 30px;
       height: 30px;
       color: #fff;
     }
 
-    &_user-photo{
+    &_user-photo {
       width: 34px;
       height: 34px;
       background-color: rgba(78, 97, 107, 0.503);
       border-radius: 50%;
       border: 1px solid #fff;
-      background-size: cover; 
-      background-position: center; 
+      background-size: cover;
+      background-position: center;
     }
 
-    &_input{
+    &_input {
       position: absolute;
       width: 30px;
       z-index: 1;
@@ -58,7 +56,7 @@
   }
 }
 
-.user-photo-upgrate{
+.user-photo-upgrate {
   cursor: pointer;
   position: relative;
   display: flex;
@@ -66,5 +64,3 @@
   justify-content: center;
   z-index: 0;
 }
-
-

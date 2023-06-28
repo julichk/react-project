@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const LocalTime = () => {
-  const [localTime, setLocalTime] = useState('');
+  const [localTime, setLocalTime] = useState("");
 
   useEffect(() => {
     const interval = setInterval(() => {
       const date = new Date();
-      const options = { hour: 'numeric', minute: 'numeric'};
+      const options = { hour: "numeric", minute: "numeric" };
       const timeString = date.toLocaleTimeString([], options);
       setLocalTime(timeString);
     }, 1000);
@@ -17,7 +17,7 @@ const LocalTime = () => {
   }, []);
 
   return (
-    <div className='weather_block_loc-time_time'>
+    <div className="weather_block_loc-time_time">
       <p>{localTime}</p>
     </div>
   );

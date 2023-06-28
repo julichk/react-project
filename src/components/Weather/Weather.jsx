@@ -1,5 +1,5 @@
-import Time from '../Time/Time';
-import { useState, useEffect } from 'react';
+import Time from "../Time/Time";
+import { useState, useEffect } from "react";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState({
@@ -13,7 +13,7 @@ const Weather = () => {
   });
 
   useEffect(() => {
-    const API_KEY = '95374f25361fb576cf0a39772fa1063d';
+    const API_KEY = "95374f25361fb576cf0a39772fa1063d";
 
     const getWeatherByLocation = async (latitude, longitude) => {
       const api_url = await fetch(
@@ -25,12 +25,12 @@ const Weather = () => {
       const sunset = new Date(data.sys.sunset * 1000);
 
       const sunRiseDate = sunrise.toLocaleTimeString([], {
-        hour: '2-digit',
-        minute: '2-digit',
+        hour: "2-digit",
+        minute: "2-digit",
       });
       const sunSetDate = sunset.toLocaleTimeString([], {
-        hour: '2-digit',
-        minute: '2-digit',
+        hour: "2-digit",
+        minute: "2-digit",
       });
 
       setWeatherData({
@@ -63,7 +63,9 @@ const Weather = () => {
             </p>
           </div>
           <div className="weather_block_info">
-            <p className="weather_block_info_temp">{temperatureCelsius.toFixed()}°C</p>
+            <p className="weather_block_info_temp">
+              {temperatureCelsius.toFixed()}°C
+            </p>
             {weatherData.icon && (
               <img
                 src={`http://openweathermap.org/img/w/${weatherData.icon}.png`}
