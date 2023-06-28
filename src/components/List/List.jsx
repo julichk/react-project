@@ -36,10 +36,10 @@ function List({ checkboxes, setCheckboxes, className }) {
         ></input>
         <button
           type="submit"
-          className="conteiner_form_button"
+          className="conteiner_form_button add-todo"
           onClick={handleClick}
         >
-          Add todo
+          Add 
         </button>
       </form>
 

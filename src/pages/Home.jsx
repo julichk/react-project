@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Calendar from "../components/Calendar/Calendar";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -5,8 +7,7 @@ import interactionPlugin from "@fullcalendar/interaction";
 import List from "../components/List/List";
 import Total from "../components/Total/Total";
 import Weather from "../components/Weather/Weather";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
 
 function Home() {
   const [checkboxes, setCheckboxes] = useState([]);
@@ -16,6 +17,10 @@ function Home() {
       <Header />
       <div className="content">
         <div className="content_container">
+        <div className="weather-conteiner">
+          <Weather />
+          </div>
+        <div className="without-weather">
         <div className="notes-home-conteteiner">
           <Link to="/notes" className="grid-item notes">
             <div className="notes-home-conteteiner_block">
@@ -39,10 +44,8 @@ function Home() {
           />
         </div>
         </div>
+        
         <div className="weather-calendar-conteiner">
-         <div className="weather">
-          <Weather />
-          </div>
           <div className="calendar">
           <Calendar
             plugins={[dayGridPlugin, interactionPlugin]}
@@ -50,6 +53,7 @@ function Home() {
             className="myCalendar"
           />
           </div>
+        </div>
         </div>
         </div>
       </div>
