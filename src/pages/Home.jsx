@@ -7,14 +7,18 @@ import interactionPlugin from "@fullcalendar/interaction";
 import List from "../components/List/List";
 import Total from "../components/Total/Total";
 import Weather from "../components/Weather/Weather";
+import Menu from "../components/Menu";
 
 
 function Home() {
   const [checkboxes, setCheckboxes] = useState([]);
 
+  
+
   return (
     <div>
-      <Header />
+      <Header/>
+     
       <div className="content">
         <div className="content_container">
         <div className="weather-conteiner">
@@ -57,6 +61,7 @@ function Home() {
         </div>
         </div>
       </div>
+     
     </div>
   );
 }
