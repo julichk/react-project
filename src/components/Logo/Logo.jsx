@@ -4,7 +4,7 @@ function Logo() {
     return(
         <div className="header_logo">
           <h1>Daily</h1>
-          <svg
+          <svg className="logo"
             version="1.0"
             xmlns="http://www.w3.org/2000/svg"
             width="30px"

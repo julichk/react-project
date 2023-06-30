@@ -2,6 +2,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import Logo from "../Logo";
 import { Link } from "react-router-dom";
+import Menu from "../Menu";
+
 
 const Header = () => {
   const [userPhoto, setUserPhoto] = useState(null);
@@ -20,10 +22,18 @@ const Header = () => {
     localStorage.setItem("photo", photoURL);
   };
 
+  const items  = [{value:"User", href:"/user", icon:"person"},{value:"Report a bug", href:"/report", icon:"mood_bad"},{value:"About Daily", href:"/about", icon:"help"}]
+
+  const [menuActive, setMenuActive] = useState(false);
+
   return (
-    <header className="header">
+    <div>
+      <header className="header"  active={menuActive} setActive={setMenuActive}>
       <nav className="header_sidebar">
-        <AiOutlineMenu className="header_sidebar_menu-icon" />
+        <div className="burger-btn" onClick={() => setMenuActive(!menuActive)}>
+          <span className="burger-btn_line"/>
+        </div>
+        <Menu active={menuActive} setActive={setMenuActive} header="Username" items={items} />
         <div className="user-photo-upgrate">
           <div
             className="header_sidebar_user-photo"
@@ -40,7 +50,10 @@ const Header = () => {
         <Logo />
       </Link>
       <div className="side"></div>
+     
     </header>
+    
+    </div>
   );
 };
 

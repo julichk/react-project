@@ -1,5 +1,7 @@
-import Time from "../Time/Time";
+
 import { useState, useEffect } from "react";
+import Time from "../Time/Time";
+import { Skeleton } from 'antd';
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState({
@@ -11,6 +13,8 @@ const Weather = () => {
     sunset: undefined,
     error: undefined,
   });
+
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const API_KEY = "95374f25361fb576cf0a39772fa1063d";
@@ -42,6 +46,8 @@ const Weather = () => {
         sunset: sunSetDate,
         error: undefined,
       });
+
+      setLoading(false);
     };
 
     navigator.geolocation.getCurrentPosition((position) => {
@@ -54,7 +60,10 @@ const Weather = () => {
 
   return (
     <div className="weather">
-      {weatherData.city !== undefined && weatherData.city !== null && (
+    {loading ? ( 
+      <Skeleton.Input style={{ width: 300, height: 100, maxHeight: 150}} active={true} />
+    ) : (
+      weatherData.city !== undefined && weatherData.city !== null && (
         <div className="weather_block">
           <div className="weather_block_loc-time">
             <Time />
@@ -85,9 +94,10 @@ const Weather = () => {
             </p>
           </div>
         </div>
-      )}
-      <p>{weatherData.error}</p>
-    </div>
+      )
+    )}
+    <p>{weatherData.error}</p>
+  </div>
   );
 };
 
