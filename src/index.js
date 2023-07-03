@@ -12,6 +12,8 @@ import "./assets/styles/list.scss";
 import "./assets/styles/button.scss";
 import "./assets/styles/page.scss";
 import "./assets/styles/menu.scss";
+import "./assets/styles/login.scss"
+import "./assets/styles/news.scss";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
 
