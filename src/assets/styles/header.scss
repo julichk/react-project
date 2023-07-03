@@ -8,6 +8,12 @@
   @media (min-width: 2500px) {
     font-size: 38px;
   }
+
+  &:hover{
+    text-shadow: -3px -3px 25px rgb(24, 152, 238);
+    transform: scale(1.1);
+    transition: ease-in .2s;
+  }
 }
 
 .logo{
@@ -18,7 +24,37 @@
 }
 
 .side {
-  width: 150px;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-right: 20px;
+
+  &_log-out{
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+
+    &:hover{
+      text-shadow: -3px -3px 25px rgb(24, 152, 238);
+      transform: scale(1.1);
+      transition: ease-in .2s;
+    }
+  }
+
+  &_sign-up{
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+
+    &:hover{
+      text-shadow: -3px -3px 25px rgb(24, 152, 238);
+      transform: scale(1.1);
+      transition: ease-in .2s;
+    }
+  }
+  
 }
 
 .header {
@@ -28,6 +64,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 40px;
 
   @media (min-width: 2500px) {
     height: 80px;
