@@ -8,16 +8,17 @@ function Login() {
   const [showAlert, setShowAlert] = useState(false);
 
   function handleSubmit(values) {
-    const token = localStorage.getItem('token');
-    const expectedToken = '2412dcc7-fc98-4ab7-9323-7c9bb4e99f73'; 
-    const { login, password } = values;
+  const token = localStorage.getItem('token');
+  const expectedToken = '2412dcc7-fc98-4ab7-9323-7c9bb4e99f73'; 
+  const { login, password } = values;
 
-    if (token === expectedToken && login === 'Yuliia' && password === 'cat') {
-      navigate('/');
-    } else {
-      setShowAlert(true);
-    }
+  if (token === expectedToken && login === 'Yuliia' && password === 'cat') {
+    localStorage.setItem('login', login); //  логін в localStorage
+    navigate('/');
+  } else {
+    setShowAlert(true);
   }
+}
 
   return (
     <div className='login-form'>
