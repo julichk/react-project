@@ -23,7 +23,7 @@ function Total({ checkboxes, setCheckboxes, className }) {
   return (
     <div className="red">
       <p className={`${totalClassName}`}>{renderCounterText()}</p>
-      <ButtonReset onClick={handleReset} aria-label="clear-todo"/>
+      <ButtonReset onClick={handleReset} aria-label="clear-todo" />
     </div>
   );
 }

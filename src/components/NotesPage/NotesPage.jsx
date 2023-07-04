@@ -69,7 +69,11 @@ function NotesApp() {
                 placeholder="Text..."
               />
             </div>
-            <button onClick={handleAddNote} className="notes-app__add-button" aria-label="add-note">
+            <button
+              onClick={handleAddNote}
+              className="notes-app__add-button"
+              aria-label="add-note"
+            >
               Add Note
             </button>
           </div>

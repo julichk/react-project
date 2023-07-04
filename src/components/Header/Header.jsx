@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import Logo from '../Logo';
-import { Link} from 'react-router-dom';
-import Menu from '../Menu';
-import Logout from '../LogOut/LogOut';
+import React, { useState, useEffect } from "react";
+import Logo from "../Logo";
+import { Link } from "react-router-dom";
+import Menu from "../Menu";
+import Logout from "../LogOut/LogOut";
 
-const Header = ({ handleLoginClick, handleSignUpClick, isAuthenticated, setIsAuthenticated }) => {
+const Header = ({
+  handleLoginClick,
+  handleSignUpClick,
+  setIsAuthenticated,
+}) => {
   const [userPhoto, setUserPhoto] = useState(null);
 
   useEffect(() => {
-    const storedPhoto = localStorage.getItem('photo');
+    const storedPhoto = localStorage.getItem("photo");
     if (storedPhoto) {
       setUserPhoto(storedPhoto);
     }
@@ -18,14 +22,14 @@ const Header = ({ handleLoginClick, handleSignUpClick, isAuthenticated, setIsAut
     const file = event.target.files[0];
     const photoURL = URL.createObjectURL(file);
     setUserPhoto(photoURL);
-    localStorage.setItem('photo', photoURL);
+    localStorage.setItem("photo", photoURL);
   };
 
   const items = [
-    { value: 'User', href: '/user', icon: 'person' },
-    { value: 'News', href: '/news', icon: 'library_books' },
-    { value: 'About Daily', href: '/report', icon: 'help' },
-    { value: 'Report a bug', href: '/about', icon: 'mood_bad' },
+    { value: "User", href: "/user", icon: "person" },
+    { value: "News", href: "/news", icon: "library_books" },
+    { value: "About Daily", href: "/report", icon: "help" },
+    { value: "Report a bug", href: "/about", icon: "mood_bad" },
   ];
 
   const [menuActive, setMenuActive] = useState(false);
@@ -34,32 +38,59 @@ const Header = ({ handleLoginClick, handleSignUpClick, isAuthenticated, setIsAut
     <div>
       <header className="header" active={menuActive} setActive={setMenuActive}>
         <nav className="header_sidebar">
-          <div className="burger-btn" onClick={() => setMenuActive(!menuActive)}>
+          <div
+            className="burger-btn"
+            onClick={() => setMenuActive(!menuActive)}
+          >
             <span className="burger-btn_line" />
           </div>
-          <Menu active={menuActive} setActive={setMenuActive} items={items} login={localStorage.getItem('login')} aria-label="side-bar"/>
-          {localStorage.getItem('login') === 'Yuliia' ? (
-          <div className="user-photo-upgrate">
+          <Menu
+            active={menuActive}
+            setActive={setMenuActive}
+            items={items}
+            login={localStorage.getItem("login")}
+            aria-label="side-bar"
+          />
+          {localStorage.getItem("login") === "Yuliia" ? (
+            <div className="user-photo-upgrate">
               {userPhoto && (
-                <div className="header_sidebar_user-photo" style={{ backgroundImage: `url(${userPhoto})` }}></div>
+                <div
+                  className="header_sidebar_user-photo"
+                  style={{ backgroundImage: `url(${userPhoto})` }}
+                ></div>
               )}
-              <input type="file" className="header_sidebar_input" onChange={handlePhotoChange} />
+              <input
+                type="file"
+                className="header_sidebar_input"
+                onChange={handlePhotoChange}
+              />
             </div>
-          ):null}
+          ) : null}
         </nav>
-        <Link to={localStorage.getItem('login') === 'Yuliia'  ? '/' : '/news'} aria-label="to home-page">
+        <Link
+          to={localStorage.getItem("login") === "Yuliia" ? "/" : "/news"}
+          aria-label="to home-page"
+        >
           <Logo />
         </Link>
         <div className="side">
-        {localStorage.getItem('login') === 'Yuliia' ? (
+          {localStorage.getItem("login") === "Yuliia" ? (
             <Logout setIsAuthenticated={setIsAuthenticated} />
           ) : (
-            <p className="side_log-out" onClick={handleLoginClick} aria-label="log-in">
+            <p
+              className="side_log-out"
+              onClick={handleLoginClick}
+              aria-label="log-in"
+            >
               Log in
             </p>
           )}
-         {localStorage.getItem('login') !=='Yuliia'  && (
-            <p className="side_sign-up" onClick={handleSignUpClick} aria-label="sign-up">
+          {localStorage.getItem("login") !== "Yuliia" && (
+            <p
+              className="side_sign-up"
+              onClick={handleSignUpClick}
+              aria-label="sign-up"
+            >
               Sign Up
             </p>
           )}

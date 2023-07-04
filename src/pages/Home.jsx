@@ -21,7 +21,11 @@ function Home() {
           </div>
           <div className="without-weather">
             <div className="notes-home-conteteiner">
-              <Link to="/notes" className="grid-item notes" aria-label="to-your-notes">
+              <Link
+                to="/notes"
+                className="grid-item notes"
+                aria-label="to-your-notes"
+              >
                 <div className="notes-home-conteteiner_block">
                   <div className="notes-home-conteteiner_block_white">
                     <div className="notes-home-conteteiner_block_white_text">

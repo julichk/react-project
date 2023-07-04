@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from "react";
 import Time from "../Time/Time";
-import { Skeleton } from 'antd';
+import { Skeleton } from "antd";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState({
@@ -60,44 +59,48 @@ const Weather = () => {
 
   return (
     <div className="weather">
-    {loading ? ( 
-      <Skeleton.Input style={{ width: 300, height: 100, maxHeight: 150}} active={true} />
-    ) : (
-      weatherData.city !== undefined && weatherData.city !== null && (
-        <div className="weather_block">
-          <div className="weather_block_loc-time">
-            <Time />
-            <p className="weather_block_loc-time_location">
-              {weatherData.country}, {weatherData.city}
-            </p>
+      {loading ? (
+        <Skeleton.Input
+          style={{ width: 300, height: 100, maxHeight: 150 }}
+          active={true}
+        />
+      ) : (
+        weatherData.city !== undefined &&
+        weatherData.city !== null && (
+          <div className="weather_block">
+            <div className="weather_block_loc-time">
+              <Time />
+              <p className="weather_block_loc-time_location">
+                {weatherData.country}, {weatherData.city}
+              </p>
+            </div>
+            <div className="weather_block_info">
+              <p className="weather_block_info_temp">
+                {temperatureCelsius.toFixed()}°C
+              </p>
+              {weatherData.icon && (
+                <img
+                  src={`http://openweathermap.org/img/w/${weatherData.icon}.png`}
+                  alt="Weather Icon"
+                  className="weather_block_info_icon"
+                />
+              )}
+            </div>
+            <div className="weather_block_sun">
+              <p className="weather_block_sun_rise">
+                <span>Sunrise: </span>
+                {weatherData.sunrise}
+              </p>
+              <p className="weather_block_sun_set">
+                <span>Sunset: </span>
+                {weatherData.sunset}
+              </p>
+            </div>
           </div>
-          <div className="weather_block_info">
-            <p className="weather_block_info_temp">
-              {temperatureCelsius.toFixed()}°C
-            </p>
-            {weatherData.icon && (
-              <img
-                src={`http://openweathermap.org/img/w/${weatherData.icon}.png`}
-                alt="Weather Icon"
-                className="weather_block_info_icon"
-              />
-            )}
-          </div>
-          <div className="weather_block_sun">
-            <p className="weather_block_sun_rise">
-              <span>Sunrise: </span>
-              {weatherData.sunrise}
-            </p>
-            <p className="weather_block_sun_set">
-              <span>Sunset: </span>
-              {weatherData.sunset}
-            </p>
-          </div>
-        </div>
-      )
-    )}
-    <p>{weatherData.error}</p>
-  </div>
+        )
+      )}
+      <p>{weatherData.error}</p>
+    </div>
   );
 };
 
