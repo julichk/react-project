@@ -16,7 +16,7 @@ const Weather = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const API_KEY = "95374f25361fb576cf0a39772fa1063d";
+    const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
     const API_URL_WEATHER= process.env.REACT_APP_WEATHER_API;
 
     const getWeatherByLocation = async (latitude, longitude) => {
