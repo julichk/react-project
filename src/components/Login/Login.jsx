@@ -17,7 +17,7 @@ function Login() {
 
   function handleSubmit(values) {
     const token = localStorage.getItem("token");
-    const expectedToken = "a8b4b64f-d726-4ed6-bd48-ee654af7c135";
+    const expectedToken = "1ee5ea2d-d7c2-460b-8031-eb18e1c8aede";
     const { login, password } = values;
 
     if (token === expectedToken && login === "Yuliia" && password === "cat") {

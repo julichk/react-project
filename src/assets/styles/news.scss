@@ -4,6 +4,7 @@
   align-items: center;
   padding: 2.5vh;
   position: relative;
+  width: 100%;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -100,4 +101,12 @@
 .like {
   color: rgb(247, 66, 66);
   cursor: pointer;
+}
+
+.loading{
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: rgba(79, 83, 86, 0.769);
+  margin: 0 auto;
 }

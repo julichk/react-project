@@ -4,6 +4,9 @@
   font-weight: 300;
   font-size: 26px;
   color: rgb(255, 255, 255);
+  width: 110px;
+  justify-content: flex-end;
+ 
 
   @media (min-width: 2500px) {
     font-size: 38px;
@@ -82,7 +85,7 @@
       width: 7%;
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 1160px) {
       width: 20%;
     }
 
@@ -146,4 +149,8 @@
     height: 44px;
     width: 44px;
   }
+}
+
+.logo-link{
+  margin: 0 auto;
 }

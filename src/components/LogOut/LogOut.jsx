@@ -21,7 +21,11 @@ const LogOut = () => {
 
   return (
     <div>
-      <p className="side_log-out" onClick={handleLogoutClick} aria-label="log-out">
+      <p
+        className="side_log-out"
+        onClick={handleLogoutClick}
+        aria-label="log-out"
+      >
         Log out
       </p>
       <Modal
