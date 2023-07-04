@@ -11,6 +11,7 @@ const LogOut = () => {
   };
 
   const handleConfirmLogout = () => {
+    localStorage.removeItem("login");
     navigate("/news");
   };
 
@@ -20,7 +21,7 @@ const LogOut = () => {
 
   return (
     <div>
-      <p className="side_log-out" onClick={handleLogoutClick}>
+      <p className="side_log-out" onClick={handleLogoutClick} aria-label="log-out">
         Log out
       </p>
       <Modal

@@ -21,7 +21,6 @@
 .myCalendar {
   width: 275px;
   height: 225px;
-
 }
 
 .fc .fc-scrollgrid-liquid {
@@ -29,12 +28,11 @@
   border-top: 1px solid rgb(133, 226, 238);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    transition: transform 0.3s;
+  transition: transform 0.3s;
 
-    &:hover {
-        box-shadow: none;
-    }
-    
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .fc-theme-standard td,

@@ -8,57 +8,56 @@ import List from "../components/List/List";
 import Total from "../components/Total/Total";
 import Weather from "../components/Weather/Weather";
 
-
 function Home() {
   const [checkboxes, setCheckboxes] = useState([]);
 
   return (
     <div>
-      <Header/>
-     
+      <Header />
       <div className="content">
-        <div className="content_container">
-        <div className="weather-conteiner">
-          <Weather />
+        <section className="content_container">
+          <div className="weather-conteiner">
+            <Weather />
           </div>
-        <div className="without-weather">
-        <div className="notes-home-conteteiner">
-          <Link to="/notes" className="grid-item notes">
-            <div className="notes-home-conteteiner_block">
-              <div className="notes-home-conteteiner_block_white">
-                <div className="notes-home-conteteiner_block_white_text"><p>Notes</p></div>
+          <div className="without-weather">
+            <div className="notes-home-conteteiner">
+              <Link to="/notes" className="grid-item notes" aria-label="to-your-notes">
+                <div className="notes-home-conteteiner_block">
+                  <div className="notes-home-conteteiner_block_white">
+                    <div className="notes-home-conteteiner_block_white_text">
+                      <p>Notes</p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="todo-list-conteiner">
+              <div className="todo-list">
+                <List
+                  checkboxes={checkboxes}
+                  setCheckboxes={setCheckboxes}
+                  className="conteiner_form"
+                />
+                <Total
+                  checkboxes={checkboxes}
+                  setCheckboxes={setCheckboxes}
+                  className="conteiner-total_block_items"
+                />
               </div>
-           </div>
-        </Link>
-        </div>
-        <div className="todo-list-conteiner">
-        <div className="todo-list">
-          <List
-            checkboxes={checkboxes}
-            setCheckboxes={setCheckboxes}
-            className="conteiner_form"
-          />
-          <Total
-            checkboxes={checkboxes}
-            setCheckboxes={setCheckboxes}
-            className="conteiner-total_block_items"
-          />
-        </div>
-        </div>
-        
-        <div className="weather-calendar-conteiner">
-          <div className="calendar">
-          <Calendar
-            plugins={[dayGridPlugin, interactionPlugin]}
-            initialView="dayGridMonth"
-            className="myCalendar"
-          />
+            </div>
+
+            <div className="weather-calendar-conteiner">
+              <div className="calendar">
+                <Calendar
+                  plugins={[dayGridPlugin, interactionPlugin]}
+                  initialView="dayGridMonth"
+                  className="myCalendar"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
-        </div>
+        </section>
       </div>
-     
     </div>
   );
 }

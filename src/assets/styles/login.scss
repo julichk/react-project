@@ -1,16 +1,14 @@
-
-
-.sign-form{
+.sign-form {
   background-color: rgba(14, 14, 14, 0.417);
-  width: 100%;
+  width: 97%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
 
-  &_conteiner{
-    background-color:rgba(155, 238, 249, 0.755);
+  &_conteiner {
+    background-color: rgba(155, 238, 249, 0.755);
     width: 50%;
     height: 75%;
     border-radius: 5px;
@@ -18,12 +16,12 @@
     justify-content: center;
     align-items: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     padding: 10px 0;
   }
 }
 
-.sign-form_conteiner_formik_block{
+.sign-form_conteiner_formik_block {
   background-color: rgb(255, 255, 255);
   width: 85%;
   height: 90%;
@@ -34,158 +32,155 @@
   padding: 10px 0;
   border-radius: 5px;
 
-  &_inputs{
+  &_inputs {
     width: 100%;
     height: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 10px;
 
-
-    &_login{
+    &_login {
       width: 100%;
-      
+
       gap: 5px;
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       justify-content: space-between;
       flex-direction: column;
 
-
-      &_label{
+      &_label {
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
         color: rgb(68, 177, 192);
         height: 100%;
-        font-size:26px;
+        font-size: 26px;
       }
 
-      &_input{
+      &_input {
         width: 100%;
         padding: 5px 10px;
         display: flex;
-        align-items: end;
-        border: 1px solid  rgb(133, 226, 238);
+        align-items: flex-end;
+        border: 1px solid rgb(133, 226, 238);
         line-height: 100%;
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
         color: rgb(68, 177, 192);
-        font-size:16px;
+        font-size: 16px;
         border-radius: 5px;
 
-        &:focus{
+        &:focus {
           box-shadow: rgba(133, 226, 238, 0.639) 0px 7px 10px 0px;
         }
       }
     }
 
-    &_pass{
+    &_pass {
       width: 100%;
-      
+
       gap: 5px;
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
       justify-content: space-between;
-      
 
-      &_label{
+      &_label {
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
-        color:rgb(68, 177, 192);
+        color: rgb(68, 177, 192);
         height: 100%;
-        font-size:26px;
+        font-size: 26px;
       }
 
-      &_input{
+      &_input {
         width: 100%;
         padding: 5px 10px;
         display: flex;
-        align-items: end;
-        border: 1px solid  rgb(133, 226, 238);
+        align-items: flex-end;
+        border: 1px solid rgb(133, 226, 238);
         line-height: 100%;
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
         color: rgb(68, 177, 192);
-        font-size:16px;
+        font-size: 16px;
         border-radius: 5px;
 
-        &:focus{
+        &:focus {
           box-shadow: rgba(133, 226, 238, 0.639) 0px 7px 10px 0px;
         }
       }
     }
 
-    &_pass-conf{
+    &_pass-conf {
       width: 100%;
-      
+
       gap: 5px;
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
       justify-content: space-between;
 
-      &_label{
+      &_label {
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
         color: rgb(68, 177, 192);
         height: 100%;
-        font-size:26px;
+        font-size: 26px;
       }
 
-      &_input{
+      &_input {
         width: 100%;
         padding: 5px 10px;
         display: flex;
-        align-items: end;
-        border: 1px solid  rgb(133, 226, 238);
+        align-items: flex-end;
+        border: 1px solid rgb(133, 226, 238);
         line-height: 100%;
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
         color: rgb(68, 177, 192);
-        font-size:16px;
+        font-size: 16px;
         border-radius: 5px;
 
-        &:focus{
+        &:focus {
           box-shadow: rgba(133, 226, 238, 0.639) 0px 7px 10px 0px;
         }
       }
     }
 
-    &_mail{
+    &_mail {
       width: 100%;
-      
+
       gap: 5px;
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
       justify-content: space-between;
 
-      &_label{
+      &_label {
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
-        color:rgb(68, 177, 192);
+        color: rgb(68, 177, 192);
         height: 100%;
-        font-size:26px;
+        font-size: 26px;
       }
 
-      &_input{
+      &_input {
         width: 100%;
         padding: 5px 10px;
         display: flex;
-        align-items: end;
-        border: 1px solid  rgb(133, 226, 238);
+        align-items: flex-end;
+        border: 1px solid rgb(133, 226, 238);
         line-height: 100%;
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
         color: rgb(68, 177, 192);
-        font-size:16px;
+        font-size: 16px;
         border-radius: 5px;
 
-        &:focus{
+        &:focus {
           box-shadow: rgba(133, 226, 238, 0.639) 0px 7px 10px 0px;
         }
       }
@@ -193,41 +188,41 @@
   }
 }
 
-.sign-form_conteiner_formik_block_button{
+.sign-form_conteiner_formik_block_button {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  &_sub{
+  &_sub {
     padding: 10px 20px;
     border-radius: 5px;
-    border: 1px solid  rgb(133, 226, 238);
-    color:rgb(68, 177, 192);
+    border: 1px solid rgb(133, 226, 238);
+    color: rgb(68, 177, 192);
     font-family: "IBM Plex Sans", serif;
     font-weight: 400;
     font-size: 16px;
 
-    &:hover{
-      background-color:  rgb(133, 226, 238);
+    &:hover {
+      background-color: rgb(133, 226, 238);
       color: #fff;
-      transition: ease-in .3s;
+      transition: ease-in 0.3s;
     }
   }
 }
 
 //login
-.login-form{
+.login-form {
   background-color: rgba(14, 14, 14, 0.417);
-  width: 100%;
+  width: 97%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
 
-  &_conteiner{
-    background-color:rgba(155, 238, 249, 0.755);
+  &_conteiner {
+    background-color: rgba(155, 238, 249, 0.755);
     width: 35%;
     height: 65%;
     border-radius: 5px;
@@ -235,12 +230,12 @@
     justify-content: center;
     align-items: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     padding: 10px 0;
   }
 }
 
-.login-form_conteiner_block{
+.login-form_conteiner_block {
   background-color: rgb(255, 255, 255);
   width: 85%;
   height: 90%;
@@ -251,90 +246,84 @@
   padding: 10px 0;
   border-radius: 5px;
 
-  &_inputs{
+  &_inputs {
     width: 100%;
     height: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 10px;
 
-
-    &_login{
+    &_login {
       width: 100%;
       gap: 5px;
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       justify-content: space-between;
       flex-direction: column;
 
-
-      &_label{
+      &_label {
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
         color: rgb(68, 177, 192);
         height: 100%;
-        font-size:26px;
+        font-size: 26px;
       }
 
-      &_input{
+      &_input {
         width: 100%;
         padding: 5px 10px;
         display: flex;
-        align-items: end;
-        border: 1px solid  rgb(133, 226, 238);
+        align-items: flex-end;
+        border: 1px solid rgb(133, 226, 238);
         line-height: 100%;
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
         color: rgb(68, 177, 192);
-        font-size:16px;
+        font-size: 16px;
         border-radius: 5px;
 
-        &:focus{
+        &:focus {
           box-shadow: rgba(133, 226, 238, 0.639) 0px 7px 10px 0px;
         }
       }
     }
 
-    &_pass{
+    &_pass {
       width: 100%;
       gap: 5px;
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
       justify-content: space-between;
-      
 
-      &_label{
+      &_label {
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
-        color:rgb(68, 177, 192);
+        color: rgb(68, 177, 192);
         height: 100%;
-        font-size:26px;
+        font-size: 26px;
       }
 
-      &_input{
+      &_input {
         width: 100%;
         padding: 5px 10px;
         display: flex;
-        align-items: end;
-        border: 1px solid  rgb(133, 226, 238);
+        align-items: flex-end;
+        border: 1px solid rgb(133, 226, 238);
         line-height: 100%;
         font-family: "IBM Plex Sans", serif;
         font-weight: 300;
         color: rgb(68, 177, 192);
-        font-size:16px;
+        font-size: 16px;
         border-radius: 5px;
 
-        &:focus{
+        &:focus {
           box-shadow: rgba(133, 226, 238, 0.639) 0px 7px 10px 0px;
         }
       }
     }
-
-    
-    
   }
 }

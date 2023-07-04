@@ -8,6 +8,7 @@ function NewsPage() {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
   const isAuthenticated = showLogin || showSignUp;
+  
 
   const handleLoginClick = () => {
     setShowLogin(true);

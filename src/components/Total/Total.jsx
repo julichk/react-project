@@ -17,12 +17,13 @@ function Total({ checkboxes, setCheckboxes, className }) {
 
   const handleReset = () => {
     setCheckboxes([]);
+    localStorage.removeItem("checkboxes");
   };
 
   return (
     <div className="red">
       <p className={`${totalClassName}`}>{renderCounterText()}</p>
-      <ButtonReset onClick={handleReset} />
+      <ButtonReset onClick={handleReset} aria-label="clear-todo"/>
     </div>
   );
 }

@@ -69,7 +69,7 @@ function NotesApp() {
                 placeholder="Text..."
               />
             </div>
-            <button onClick={handleAddNote} className="notes-app__add-button">
+            <button onClick={handleAddNote} className="notes-app__add-button" aria-label="add-note">
               Add Note
             </button>
           </div>
@@ -84,11 +84,13 @@ function NotesApp() {
                         className="notes-app__note-textarea"
                         value={editedNoteText}
                         onChange={(e) => setEditedNoteText(e.target.value)}
+                        aria-label="write-text"
                       />
                       <div className="notes-app__note-buttons">
                         <button
                           onClick={handleUpdateNote}
                           className="notes-app__save-button"
+                          aria-label="save-changes"
                         >
                           Save
                         </button>
@@ -104,12 +106,14 @@ function NotesApp() {
                       <button
                         onClick={() => handleEditNote(note.id)}
                         className="notes-app_button_edit"
+                        aria-label="edite-note"
                       >
                         Edit
                       </button>
                       <button
                         onClick={() => handleDeleteNote(note.id)}
                         className="notes-app_button_delete"
+                        aria-label="delete-note"
                       >
                         Delete
                       </button>
