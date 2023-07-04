@@ -17,10 +17,11 @@ const Weather = () => {
 
   useEffect(() => {
     const API_KEY = "95374f25361fb576cf0a39772fa1063d";
+    const API_URL_WEATHER= process.env.REACT_APP_WEATHER_API;
 
     const getWeatherByLocation = async (latitude, longitude) => {
       const api_url = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`
+        `${API_URL_WEATHER}/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`
       );
       const data = await api_url.json();
       console.log(data);

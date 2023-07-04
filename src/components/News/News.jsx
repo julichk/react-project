@@ -6,13 +6,14 @@ function News() {
   const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
+  const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
 
   const fetchNews = useCallback(async () => {
     try {
       const response = await axios.get(REACT_APP_BASE_URL, {
         params: {
           country: "us",
-          apiKey: "6d77c140fd1b4312a0a7594d2322607e",
+          apiKey: REACT_APP_API_KEY ,
           pageSize: 10,
         },
       });
