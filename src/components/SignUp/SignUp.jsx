@@ -20,13 +20,16 @@ function SignUp() {
     window.location.href = '/news';
   };
 
-  const handleFormClick = () => {
-    setActive(false);
+  const handleFormClick = (event) => {
+    if (event.target.classList.contains('sign-form')) {
+      setActive(false);
+      window.location.href = '/news';
+    }
   };
 
   if (registrationSuccess) {
     return (
-      <div>
+      <div className="alert-succes">
         <Alert
           message="Реєстрація пройшла успішно!"
           type="success"

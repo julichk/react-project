@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '../Logo';
-import { Link, useLocation } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Menu from '../Menu';
 import Logout from '../LogOut/LogOut';
 
 const Header = ({ handleLoginClick, handleSignUpClick, isAuthenticated, setIsAuthenticated }) => {
   const [userPhoto, setUserPhoto] = useState(null);
-  const location = useLocation();
 
   useEffect(() => {
     const storedPhoto = localStorage.getItem('photo');
@@ -38,29 +37,29 @@ const Header = ({ handleLoginClick, handleSignUpClick, isAuthenticated, setIsAut
           <div className="burger-btn" onClick={() => setMenuActive(!menuActive)}>
             <span className="burger-btn_line" />
           </div>
-          <Menu active={menuActive} setActive={setMenuActive} items={items} login={localStorage.getItem('login')} />
-          {isAuthenticated && localStorage.getItem('login') ? (
-            <div className="user-photo-upgrate">
+          <Menu active={menuActive} setActive={setMenuActive} items={items} login={localStorage.getItem('login')} aria-label="side-bar"/>
+          {localStorage.getItem('login') === 'Yuliia' ? (
+          <div className="user-photo-upgrate">
               {userPhoto && (
                 <div className="header_sidebar_user-photo" style={{ backgroundImage: `url(${userPhoto})` }}></div>
               )}
               <input type="file" className="header_sidebar_input" onChange={handlePhotoChange} />
             </div>
-          ) : null}
+          ):null}
         </nav>
-        <Link to={location.pathname === '/news' ? '/news' : '/'}>
+        <Link to={localStorage.getItem('login') === 'Yuliia'  ? '/' : '/news'} aria-label="to home-page">
           <Logo />
         </Link>
         <div className="side">
-          {location.pathname === '/' ? (
+        {localStorage.getItem('login') === 'Yuliia' ? (
             <Logout setIsAuthenticated={setIsAuthenticated} />
           ) : (
-            <p className="side_log-out" onClick={handleLoginClick}>
+            <p className="side_log-out" onClick={handleLoginClick} aria-label="log-in">
               Log in
             </p>
           )}
-          {location.pathname === '/news' && (
-            <p className="side_sign-up" onClick={handleSignUpClick}>
+         {localStorage.getItem('login') !=='Yuliia'  && (
+            <p className="side_sign-up" onClick={handleSignUpClick} aria-label="sign-up">
               Sign Up
             </p>
           )}

@@ -4,14 +4,10 @@
   align-items: center;
   padding: 2.5vh;
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    @media (max-width: 743px) {
-       
-    }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px;
+  }
 
   &_container {
     gap: 100px;
@@ -19,43 +15,42 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2vh ;
+    padding: 2vh;
     background-color: rgba(97, 192, 203, 0.231);
 
     @media (min-width: 1430px) {
-       
-        padding: 5vh;
+      padding: 5vh;
     }
 
     @media (max-width: 450px) {
-        gap: 80px;
+      gap: 80px;
     }
   }
 }
 
-.weather-conteiner{
-    display: flex;
-    justify-content: end;
-    padding: 0 57px;
-    width: 100%;
+.weather-conteiner {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 57px;
+  width: 100%;
 
-    @media (max-width: 1279px) {
-        padding: 0;
-        justify-content: center;
-     }
+  @media (max-width: 1279px) {
+    padding: 0;
+    justify-content: center;
+  }
 
-    @media (max-width: 744px) {
-       justify-content: center;
-    }
+  @media (max-width: 744px) {
+    justify-content: center;
+  }
 }
 
-.without-weather{
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
+.without-weather {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
 
-    @media (max-width: 833px) {
-        flex-wrap: wrap-reverse;
-        gap: 40px;
-    }
+  @media (max-width: 833px) {
+    flex-wrap: wrap-reverse;
+    gap: 40px;
+  }
 }

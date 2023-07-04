@@ -4,7 +4,6 @@
   justify-content: center;
   transition: transform 0.3s;
   height: 225px;
-  
 }
 
 .conteiner-weather-calendar {
@@ -22,15 +21,10 @@
   }
 }
 
-
-
 .weather {
   min-width: 300px;
   max-height: 150px;
   height: 100px;
-  
-  
-
 
   &_block {
     width: 100%;
@@ -47,8 +41,6 @@
       height: 160px;
       width: 110%;
     }
-
-    
   }
 }
 
@@ -78,8 +70,8 @@
   grid-column: 2;
   grid-row: 1;
   display: flex;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
 
   &_icon {
     margin-bottom: 1vh;
@@ -102,7 +94,7 @@
   display: flex;
   justify-content: space-around;
   grid-gap: 10px;
-  gap: .5vh;
+  gap: 0.5vh;
 
   &_rise {
     color: #fff;
@@ -121,8 +113,6 @@
     font-size: 1.8vh;
     font-weight: 300;
   }
-
-  
 }
 .sunrise:before,
 .sunset:before {
@@ -134,4 +124,3 @@
   border-radius: 50%;
   margin-bottom: 0.5vh;
 }
-

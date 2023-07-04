@@ -1,10 +1,21 @@
 import classNames from "classnames";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function List({ checkboxes, setCheckboxes, className }) {
   const formClassName = classNames(className);
 
   const [inputText, setInputText] = useState("");
+
+  useEffect(() => {
+    const storedCheckboxes = localStorage.getItem("checkboxes");
+    if (storedCheckboxes) {
+      setCheckboxes(JSON.parse(storedCheckboxes));
+    }
+  }, [setCheckboxes]);
+
+  const saveCheckboxesToLocalStorage = (updatedCheckboxes) => {
+    localStorage.setItem("checkboxes", JSON.stringify(updatedCheckboxes));
+  };
 
   const handleClick = (event) => {
     event.preventDefault();
@@ -13,7 +24,9 @@ function List({ checkboxes, setCheckboxes, className }) {
         className: "conteiner_checkbox_check",
         label: inputText,
       };
-      setCheckboxes([...checkboxes, newCheckbox]);
+      const updatedCheckboxes = [...checkboxes, newCheckbox];
+      setCheckboxes(updatedCheckboxes);
+      saveCheckboxesToLocalStorage(updatedCheckboxes);
       setInputText("");
     }
   };
@@ -32,14 +45,15 @@ function List({ checkboxes, setCheckboxes, className }) {
           onChange={handleInput}
           className="conteiner_form_input"
           placeholder="Create a new todo..."
-          autocomplete="off"
-        ></input>
+          autoComplete="off"
+        />
         <button
           type="submit"
           className="conteiner_form_button add-todo"
           onClick={handleClick}
+          aria-label="add-new-todo"
         >
-          Add 
+          Add
         </button>
       </form>
 
