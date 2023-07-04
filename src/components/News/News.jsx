@@ -37,7 +37,7 @@ function News() {
   return (
     <div className="news-content">
       {isLoading ? (
-        <p>Loading...</p>
+        <p className="loading">Loading...</p>
       ) : (
         <div className="news-content_conteiner">
           <h1 className="news-content_conteiner_header">News</h1>

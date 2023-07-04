@@ -69,7 +69,7 @@ const Header = ({
         </nav>
         <Link
           to={localStorage.getItem("login") === "Yuliia" ? "/" : "/news"}
-          aria-label="to home-page"
+          aria-label="to home-page" className="logo-link"
         >
           <Logo />
         </Link>
