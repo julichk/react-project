@@ -55,7 +55,6 @@ function Login() {
                   type="text"
                   id="login"
                   name="login"
-                  autoComplete="off"
                   className="login-form_conteiner_block_inputs_login_input"
                 />
               </div>
@@ -70,12 +69,11 @@ function Login() {
                   type="password"
                   id="password"
                   name="password"
-                  autoComplete="off"
                   className="login-form_conteiner_block_inputs_pass_input"
                 />
               </div>
               {showAlert && (
-                <Alert message="User noy found" type="error" showIcon />
+                <Alert message="User not found" type="error" showIcon />
               )}
             </div>
 

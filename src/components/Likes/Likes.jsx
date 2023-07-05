@@ -38,7 +38,7 @@ function LikeButton({ id }) {
 function Article() {
   return (
     <div>
-      {Array(15)
+      {Array(11)
         .fill()
         .map((_, index) => (
           <LikeButton key={index} id={index} />
