@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import Logo from "../Logo";
 import { Link } from "react-router-dom";
 import Menu from "../Menu";
@@ -9,7 +9,15 @@ const Header = ({
   handleSignUpClick,
   setIsAuthenticated,
 }) => {
+
   const [userPhoto, setUserPhoto] = useState(null);
+  //зображення
+  const handlePhotoChange = (event) => {
+    const file = event.target.files[0];
+    const photoURL = URL.createObjectURL(file);
+    setUserPhoto(photoURL);
+    localStorage.setItem("photo", photoURL);
+  };
 
   useEffect(() => {
     const storedPhoto = localStorage.getItem("photo");
@@ -17,13 +25,6 @@ const Header = ({
       setUserPhoto(storedPhoto);
     }
   }, []);
-
-  const handlePhotoChange = (event) => {
-    const file = event.target.files[0];
-    const photoURL = URL.createObjectURL(file);
-    setUserPhoto(photoURL);
-    localStorage.setItem("photo", photoURL);
-  };
 
   const items = [
     { value: "User", href: "/user", icon: "person" },
@@ -36,7 +37,7 @@ const Header = ({
 
   return (
     <div>
-      <header className="header" active={menuActive} setActive={setMenuActive}>
+      <header className="header">
         <nav className="header_sidebar">
           <div
             className="burger-btn"

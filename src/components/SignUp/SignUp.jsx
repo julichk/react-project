@@ -10,7 +10,6 @@ function SignUp() {
   const handleSubmit = (values) => {
     // генерація токену
     const token = uuidv4();
-
     localStorage.setItem("token", token);
 
     setRegistrationSuccess(true);
@@ -31,7 +30,7 @@ function SignUp() {
     return (
       <div className="alert-succes">
         <Alert
-          message="Реєстрація пройшла успішно!"
+          message="Registration was successful!"
           type="success"
           showIcon
           action={

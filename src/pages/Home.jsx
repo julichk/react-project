@@ -49,7 +49,6 @@ function Home() {
                 />
               </div>
             </div>
-
             <div className="weather-calendar-conteiner">
               <div className="calendar">
                 <Calendar

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Time from "../Time/Time";
-import { Skeleton } from "antd";
+import { Skeleton, Alert } from "antd";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState({
@@ -16,15 +16,15 @@ const Weather = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const API_KEY = "95374f25361fb576cf0a39772fa1063d";
-    const API_URL_WEATHER= process.env.REACT_APP_WEATHER_API;
+    const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+    const API_URL_WEATHER = process.env.REACT_APP_WEATHER_API;
 
     const getWeatherByLocation = async (latitude, longitude) => {
       const api_url = await fetch(
         `${API_URL_WEATHER}/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`
       );
+
       const data = await api_url.json();
-      console.log(data);
       const sunrise = new Date(data.sys.sunrise * 1000);
       const sunset = new Date(data.sys.sunset * 1000);
 
@@ -46,7 +46,6 @@ const Weather = () => {
         sunset: sunSetDate,
         error: undefined,
       });
-
       setLoading(false);
     };
 
@@ -100,7 +99,16 @@ const Weather = () => {
           </div>
         )
       )}
-      <p>{weatherData.error}</p>
+      <p>
+        {weatherData.error && (
+          <Alert
+            message="Error"
+            description={weatherData.error}
+            type="error"
+            showIcon
+          />
+        )}
+      </p>
     </div>
   );
 };

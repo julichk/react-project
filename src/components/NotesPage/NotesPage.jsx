@@ -7,17 +7,8 @@ function NotesApp() {
   const [editingNoteId, setEditingNoteId] = useState(null);
   const [editedNoteText, setEditedNoteText] = useState("");
 
-  useEffect(() => {
-    const storedNotes = localStorage.getItem("notes");
-    if (storedNotes) {
-      setNotes(JSON.parse(storedNotes));
-    }
-  }, []);
 
-  useEffect(() => {
-    localStorage.setItem("notes", JSON.stringify(notes));
-  }, [notes]);
-
+  // додавання замітки
   const handleAddNote = () => {
     if (inputText.trim() !== "") {
       const newNote = {
@@ -29,17 +20,33 @@ function NotesApp() {
     }
   };
 
+  //збереження заміток в локал
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
+
+   //завантаження заміток з локального
+   useEffect(() => {
+    const storedNotes = localStorage.getItem("notes");
+    if (storedNotes) {
+      setNotes(JSON.parse(storedNotes));
+    }
+  }, []);
+
+ // видалення замітки
   const handleDeleteNote = (id) => {
     const updatedNotes = notes.filter((note) => note.id !== id);
     setNotes(updatedNotes);
   };
 
+//редагування 
   const handleEditNote = (id) => {
     const note = notes.find((note) => note.id === id);
-    setEditingNoteId(id);
     setEditedNoteText(note.text);
+    setEditingNoteId(id);
   };
 
+  //оновлення замітки після редагуванн
   const handleUpdateNote = () => {
     const updatedNotes = notes.map((note) => {
       if (note.id === editingNoteId) {

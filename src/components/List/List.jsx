@@ -5,18 +5,7 @@ function List({ checkboxes, setCheckboxes, className }) {
   const formClassName = classNames(className);
 
   const [inputText, setInputText] = useState("");
-
-  useEffect(() => {
-    const storedCheckboxes = localStorage.getItem("checkboxes");
-    if (storedCheckboxes) {
-      setCheckboxes(JSON.parse(storedCheckboxes));
-    }
-  }, [setCheckboxes]);
-
-  const saveCheckboxesToLocalStorage = (updatedCheckboxes) => {
-    localStorage.setItem("checkboxes", JSON.stringify(updatedCheckboxes));
-  };
-
+  //додати
   const handleClick = (event) => {
     event.preventDefault();
     if (inputText !== "") {
@@ -31,6 +20,18 @@ function List({ checkboxes, setCheckboxes, className }) {
     }
   };
 
+  const saveCheckboxesToLocalStorage = (updatedCheckboxes) => {
+    localStorage.setItem("checkboxes", JSON.stringify(updatedCheckboxes));
+  };
+
+  //з локального
+  useEffect(() => {
+    const storedCheckboxes = localStorage.getItem("checkboxes");
+    if (storedCheckboxes) {
+      setCheckboxes(JSON.parse(storedCheckboxes));
+    }
+  }, [setCheckboxes]);
+  
   const handleInput = (event) => {
     setInputText(event.target.value);
   };
