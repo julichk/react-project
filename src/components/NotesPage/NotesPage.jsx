@@ -8,6 +8,15 @@ function NotesApp() {
   const [editedNoteText, setEditedNoteText] = useState("");
 
 
+  //завантаження заміток з локального
+  useEffect(() => {
+    const storedNotes = localStorage.getItem("notes");
+    if (storedNotes) {
+      setNotes(JSON.parse(storedNotes));
+    }
+  }, []);
+
+
   // додавання замітки
   const handleAddNote = () => {
     if (inputText.trim() !== "") {
@@ -25,25 +34,17 @@ function NotesApp() {
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
-   //завантаження заміток з локального
-   useEffect(() => {
-    const storedNotes = localStorage.getItem("notes");
-    if (storedNotes) {
-      setNotes(JSON.parse(storedNotes));
-    }
-  }, []);
-
+  
  // видалення замітки
   const handleDeleteNote = (id) => {
     const updatedNotes = notes.filter((note) => note.id !== id);
     setNotes(updatedNotes);
   };
-
 //редагування 
   const handleEditNote = (id) => {
     const note = notes.find((note) => note.id === id);
-    setEditedNoteText(note.text);
     setEditingNoteId(id);
+    setEditedNoteText(note.text);
   };
 
   //оновлення замітки після редагуванн
